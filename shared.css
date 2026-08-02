@@ -18,9 +18,9 @@
   --ink: #1D2A22;
   --ink-soft: #4B5A4F;
 
-  --font-display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
-  --font-body: "Public Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+  --font-display: "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-body: "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-label: "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
 
   --banner-h: 34px;
   --header-h: 84px;
@@ -57,13 +57,14 @@ h1, h2, h3, h4{
   color: var(--navy);
   margin: 0 0 0.5em;
   line-height: 1.15;
-  font-weight: 600;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 p{ margin: 0 0 1em; }
 
 .eyebrow{
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-size: 0.72rem;
@@ -80,7 +81,7 @@ p{ margin: 0 0 1em; }
   z-index: 500;
   background: var(--gold);
   color: #2A2005;
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 0.76rem;
   text-align: center;
   padding: 7px 16px;
@@ -129,16 +130,18 @@ p{ margin: 0 0 1em; }
 }
 .brand-text{ display: flex; flex-direction: column; line-height: 1.2; }
 .brand-text .state{
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 0.68rem;
+  font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--olive-light);
 }
 .brand-text .dept{
   font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.3rem;
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
   color: var(--white);
 }
 
@@ -169,6 +172,70 @@ p{ margin: 0 0 1em; }
 .main-nav a.current{
   color: var(--white);
   box-shadow: inset 0 -2px 0 var(--gold);
+}
+
+/* Dropdown items (Hunting & Fishing / State Parks) */
+.has-dropdown{ position: relative; }
+.nav-item-row{
+  display: flex;
+  align-items: center;
+}
+.dropdown-toggle{
+  display: none;
+  background: none;
+  border: none;
+  color: var(--paper);
+  cursor: pointer;
+  padding: 10px 8px;
+  margin-left: -6px;
+  border-radius: var(--radius);
+}
+.dropdown-caret{ transition: transform 0.15s ease; }
+.has-dropdown.open .dropdown-caret{ transform: rotate(180deg); }
+
+.dropdown-menu{
+  list-style: none;
+  margin: 0;
+  padding: 8px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 240px;
+  background: var(--navy-light);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-top: 2px solid var(--olive);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-6px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 600;
+}
+.dropdown-menu a{
+  display: block;
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-radius: var(--radius);
+  color: var(--paper);
+  text-decoration: none;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a:focus-visible{
+  background: var(--olive);
+  color: var(--white);
+  outline: none;
+}
+
+@media (min-width: 761px){
+  .has-dropdown:hover .dropdown-menu,
+  .has-dropdown:focus-within .dropdown-menu,
+  .has-dropdown.open .dropdown-menu{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
 }
 
 .header-actions{
@@ -299,7 +366,7 @@ p{ margin: 0 0 1em; }
   display: block;
 }
 .stat .label{
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 0.7rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -347,7 +414,7 @@ p{ margin: 0 0 1em; }
 .card h3{ font-size: 1.12rem; margin-bottom: 0.4em; }
 .card p{ color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 0.8em; }
 .card a.card-link{
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -412,7 +479,7 @@ p{ margin: 0 0 1em; }
 .feature-list li:first-child{ border-top: none; }
 .feature-list .tick{
   color: var(--gold);
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   flex-shrink: 0;
 }
 .feature-visual{
@@ -428,7 +495,7 @@ p{ margin: 0 0 1em; }
   font-size: 0.9rem;
 }
 .feature-visual .season:last-child{ border-bottom: none; }
-.feature-visual .season .sp{ color: var(--gold); font-family: var(--font-mono); font-size: 0.78rem; }
+.feature-visual .season .sp{ color: var(--gold); font-family: var(--font-label); font-size: 0.78rem; }
 
 /* =========================================================
    Footer
@@ -456,7 +523,8 @@ p{ margin: 0 0 1em; }
 }
 .site-footer p{ color: #C4CBB2; font-size: 0.9rem; }
 .footer-col h4{
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
+  font-weight: 700;
   color: var(--gold);
   font-size: 0.72rem;
   letter-spacing: 0.1em;
@@ -483,7 +551,7 @@ p{ margin: 0 0 1em; }
 }
 .footer-bottom p{ margin: 0; font-size: 0.8rem; color: #B7BFA3; }
 .footer-fine{
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: 0.72rem;
   color: #9DA687;
   max-width: 70ch;
@@ -512,11 +580,38 @@ p{ margin: 0 0 1em; }
     border-bottom: 3px solid var(--olive);
     z-index: 480;
   }
-  .main-nav.open{ max-height: 420px; }
+  .main-nav.open{ max-height: 640px; overflow-y: auto; }
   .main-nav ul{ flex-direction: column; padding: 8px 20px 18px; gap: 0; }
-  .main-nav a{ padding: 13px 6px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .main-nav a{ padding: 13px 6px; border-bottom: 1px solid rgba(255,255,255,0.08); flex: 1; }
   .nav-toggle{ display: flex; }
-  .header-actions .btn-ghost{ display: none; }
+
+  .nav-item-row{
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .nav-item-row a{ border-bottom: none; }
+  .dropdown-toggle{ display: flex; align-items: center; justify-content: center; }
+
+  .dropdown-menu{
+    position: static;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    background: rgba(0,0,0,0.18);
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+  }
+  .has-dropdown.open .dropdown-menu{
+    max-height: 260px;
+    padding: 4px 0 8px 18px;
+  }
+  .dropdown-menu a{ padding: 11px 6px; font-size: 0.88rem; }
+
   .card-grid{ grid-template-columns: 1fr; }
   .footer-top .container{ grid-template-columns: 1fr; }
 }
