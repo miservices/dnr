@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michigan DNR — Department of Natural Resources</title>
+<meta name="description" content="Simulated Michigan Department of Natural Resources interface — fishing, hunting, state parks, and forestry.">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<link rel="stylesheet" href="shared.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Banner + sticky nav are injected here -->
+<div id="header-include"></div>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <svg class="hero-ripples" viewBox="0 0 1160 420" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-20 300 C 220 250, 380 350, 620 300 S 1020 250, 1180 300 L1180 420 L-20 420 Z" fill="#58673C" opacity="0.35"/>
+      <path d="M-20 340 C 260 300, 420 390, 660 340 S 1000 300, 1180 350 L1180 420 L-20 420 Z" fill="#58673C" opacity="0.55"/>
+    </svg>
+    <div class="hero-inner">
+      <span class="eyebrow">State of Michigan &middot; Natural Resources</span>
+      <h1>Michigan's land, water, and wildlife — cared for at scale.</h1>
+      <p class="lede">The DNR manages 4.6 million acres of public land, 11,000 inland lakes, and the licenses, seasons, and rangers that keep it all in working order.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary">Buy a Fishing License</a>
+        <a href="#programs" class="btn btn-ghost">Find a State Park</a>
+      </div>
+    </div>
+    <div class="wave-divider">
+      <svg viewBox="0 0 1160 46" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 20 C 180 40, 340 0, 580 20 S 980 40, 1160 20 L1160 46 L0 46 Z" fill="#F6F3EA"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ STAT STRIP ============ -->
+  <section class="stat-strip">
+    <div class="container">
+      <div class="stat">
+        <span class="num">103</span>
+        <span class="label">State Parks &amp; Recreation Areas</span>
+      </div>
+      <div class="stat">
+        <span class="num">4.6M</span>
+        <span class="label">Acres of Public Land</span>
+      </div>
+      <div class="stat">
+        <span class="num">11,000+</span>
+        <span class="label">Inland Lakes</span>
+      </div>
+      <div class="stat">
+        <span class="num">3,288</span>
+        <span class="label">Miles of Great Lakes Shoreline</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ NOTICE BAND ============ -->
+  <section class="notice-band">
+    <div class="container">
+      <div class="icon-dot">!</div>
+      <div>
+        <h3>Fall turkey season opens September 1</h3>
+        <p>Draw results are posted, license quotas are updated weekly, and unit maps have been redrawn for the season. Check your unit before heading out.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAMS ============ -->
+  <section class="section" id="programs">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What we manage</span>
+        <h2>Four programs, one department</h2>
+        <p>Every license, permit, and trail marker on this site routes back to one of four core programs.</p>
+      </div>
+
+      <div class="card-grid">
+        <article class="card">
+          <svg class="icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 30 C 14 20, 20 34, 28 24 C 32 19, 36 22, 38 26" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M22 12 L26 22 L18 22 Z" fill="currentColor"/>
+          </svg>
+          <h3>Fishing</h3>
+          <p>Species regulations, stocking reports, and license lookup for inland lakes and the Great Lakes.</p>
+          <a href="#" class="card-link">View regulations</a>
+        </article>
+
+        <article class="card">
+          <svg class="icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 8 L26 20 L34 20 L27 26 L30 36 L22 29 L14 36 L17 26 L10 20 L18 20 Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+          <h3>Hunting &amp; Trapping</h3>
+          <p>Season dates, unit maps, and draw results for deer, turkey, waterfowl, and small game.</p>
+          <a href="#" class="card-link">Check seasons</a>
+        </article>
+
+        <article class="card">
+          <svg class="icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 34 L18 14 L26 28 L30 20 L38 34 Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" fill="none"/>
+          </svg>
+          <h3>Parks &amp; Camping</h3>
+          <p>Reserve a campsite, browse trail conditions, and buy a Recreation Passport for 103 parks.</p>
+          <a href="#" class="card-link">Reserve a site</a>
+        </article>
+
+        <article class="card">
+          <svg class="icon" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22 6 C 26 14, 30 18, 22 26 C 14 18, 18 14, 22 6 Z" stroke="currentColor" stroke-width="2"/>
+            <line x1="22" y1="26" x2="22" y2="38" stroke="currentColor" stroke-width="2"/>
+          </svg>
+          <h3>Forestry</h3>
+          <p>Timber sale schedules, wildfire risk maps, and state forest management plans by district.</p>
+          <a href="#" class="card-link">View forest data</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURE / SEASONS ============ -->
+  <section class="feature" id="seasons">
+    <div class="container">
+      <div>
+        <span class="eyebrow" style="color:#B08D57;">Season calendar</span>
+        <h2>Know what's open before you go</h2>
+        <p>Seasons shift by species, unit, and weapon type. This calendar reflects the current regulation cycle for the Lower and Upper Peninsulas.</p>
+        <ul class="feature-list">
+          <li><span class="tick">&rarr;</span> Set a reminder for license renewal deadlines</li>
+          <li><span class="tick">&rarr;</span> Cross-check unit boundaries against your GPS coordinates</li>
+          <li><span class="tick">&rarr;</span> Review harvest reporting requirements before you hunt</li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <div class="season"><span>Spring Turkey</span><span class="sp">APR 15 – MAY 31</span></div>
+        <div class="season"><span>Trout (Streams)</span><span class="sp">Last Sat. APR – SEP 30</span></div>
+        <div class="season"><span>Bear</span><span class="sp">SEP 10 – OCT 26</span></div>
+        <div class="season"><span>Archery Deer</span><span class="sp">OCT 1 – NOV 14</span></div>
+        <div class="season"><span>Firearm Deer</span><span class="sp">NOV 15 – NOV 30</span></div>
+        <div class="season"><span>Waterfowl (South Zone)</span><span class="sp">OCT 5 – DEC 21</span></div>
+      </div>
+    </div>
+    <div class="wave-divider wave-flip">
+      <svg viewBox="0 0 1160 46" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 20 C 180 40, 340 0, 580 20 S 980 40, 1160 20 L1160 46 L0 46 Z" fill="#3E4A2B"/>
+      </svg>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer is injected here -->
+<div id="footer-include"></div>
+
+<script src="includes.js"></script>
+</body>
+</html>
