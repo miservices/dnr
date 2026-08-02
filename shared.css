@@ -146,7 +146,7 @@ p{ margin: 0 0 1em; }
 }
 
 .main-nav{ display: flex; }
-.main-nav ul{
+.main-nav > ul{
   list-style: none;
   display: flex;
   gap: 4px;
@@ -581,7 +581,7 @@ p{ margin: 0 0 1em; }
     z-index: 480;
   }
   .main-nav.open{ max-height: 640px; overflow-y: auto; }
-  .main-nav ul{ flex-direction: column; padding: 8px 20px 18px; gap: 0; }
+  .main-nav > ul{ flex-direction: column; padding: 8px 20px 18px; gap: 0; }
   .main-nav a{ padding: 13px 6px; border-bottom: 1px solid rgba(255,255,255,0.08); flex: 1; }
   .nav-toggle{ display: flex; }
 
